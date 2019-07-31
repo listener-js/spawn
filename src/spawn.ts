@@ -1,5 +1,3 @@
-import { Listener } from "@listener-js/listener"
-import { Log } from "@listener-js/log"
 import { spawn } from "node-pty"
 
 export interface SpawnArg {
@@ -35,7 +33,6 @@ export interface SpawnTerminalReturn {
 export class Spawn {
 
   public static listeners: string[] = ["spawn", "spawnComplete"]
-  public static Log: typeof Log
 
   public static async spawn(
     id: string[],
@@ -96,11 +93,5 @@ export class Spawn {
         resolve({ code, out, signal })
       )
     })
-  }
-
-  public static listen(listener: Listener): void {
-    if (listener.instances.Log) {
-      this.Log = listener.instances.Log
-    }
   }
 }

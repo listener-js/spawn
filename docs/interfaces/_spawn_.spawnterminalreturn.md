@@ -22,7 +22,7 @@
 
 • **code**: *number*
 
-Defined in spawn.ts:30
+Defined in spawn.ts:28
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 • **out**: *string*
 
-Defined in spawn.ts:31
+Defined in spawn.ts:29
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 • **signal**: *number*
 
-Defined in spawn.ts:32
+Defined in spawn.ts:30

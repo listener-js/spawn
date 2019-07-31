@@ -23,7 +23,7 @@
 
 • **code**: *number*
 
-Defined in spawn.ts:16
+Defined in spawn.ts:14
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 • **err**: *boolean*
 
-Defined in spawn.ts:17
+Defined in spawn.ts:15
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 • **out**: *string*
 
-Defined in spawn.ts:18
+Defined in spawn.ts:16
 
 ___
 
@@ -47,4 +47,4 @@ ___
 
 • **signal**: *number*
 
-Defined in spawn.ts:19
+Defined in spawn.ts:17

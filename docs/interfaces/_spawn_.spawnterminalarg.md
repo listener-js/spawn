@@ -23,7 +23,7 @@
 
 • **args**? : *string[]*
 
-Defined in spawn.ts:23
+Defined in spawn.ts:21
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 • **command**: *string*
 
-Defined in spawn.ts:24
+Defined in spawn.ts:22
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 • **cwd**? : *string*
 
-Defined in spawn.ts:25
+Defined in spawn.ts:23
 
 ___
 
@@ -47,4 +47,4 @@ ___
 
 • **env**? : *`Record<string, string>`*
 
-Defined in spawn.ts:26
+Defined in spawn.ts:24

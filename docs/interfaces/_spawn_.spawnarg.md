@@ -26,7 +26,7 @@
 
 • **args**? : *string[]*
 
-Defined in spawn.ts:6
+Defined in spawn.ts:4
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 • **command**: *string*
 
-Defined in spawn.ts:7
+Defined in spawn.ts:5
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 • **cwd**? : *string*
 
-Defined in spawn.ts:8
+Defined in spawn.ts:6
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 • **exit**? : *boolean*
 
-Defined in spawn.ts:9
+Defined in spawn.ts:7
 
 ___
 
@@ -58,7 +58,7 @@ ___
 
 • **json**? : *boolean*
 
-Defined in spawn.ts:10
+Defined in spawn.ts:8
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 • **quiet**? : *boolean*
 
-Defined in spawn.ts:11
+Defined in spawn.ts:9
 
 ___
 
@@ -74,4 +74,4 @@ ___
 
 • **save**? : *boolean*
 
-Defined in spawn.ts:12
+Defined in spawn.ts:10
