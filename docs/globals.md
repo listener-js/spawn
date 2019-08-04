@@ -9,3 +9,4 @@
 ### External modules
 
 * ["spawn"](modules/_spawn_.md)
+* ["types"](modules/_types_.md)

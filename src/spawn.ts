@@ -1,38 +1,23 @@
+import { Listener } from "@listener-js/listener"
+import { Log } from "@listener-js/log"
 import { spawn } from "node-pty"
 
-export interface SpawnArg {
-  args?: string[]
-  command: string
-  cwd?: string
-  exit?: boolean
-  json?: boolean
-  quiet?: boolean
-  save?: boolean
-}
+import {
+  SpawnArg,
+  SpawnReturn,
+  SpawnTerminalArg,
+  SpawnTerminalReturn
+} from "./types"
 
-export interface SpawnReturn {
-  code: number
-  err: boolean
-  out: string
-  signal: number
-}
-
-export interface SpawnTerminalArg {
-  args?: string[]
-  command: string
-  cwd?: string
-  env?: Record<string, string>
-}
-
-export interface SpawnTerminalReturn {
-  code: number
-  out: string
-  signal: number
-}
+let log: typeof Log.log = (): void => {}
 
 export class Spawn {
 
   public static listeners: string[] = ["spawn", "spawnComplete"]
+
+  public static listen(listener: Listener): void {
+    log = listener.instances.Log.log
+  }
 
   public static async spawn(
     id: string[],
@@ -51,7 +36,7 @@ export class Spawn {
 
     const output = { code, err, out, signal }
 
-    this.spawnComplete(id, output)
+    this.spawnComplete(id, arg, output)
 
     if (err && exit) {
       process.exit(code)
@@ -61,9 +46,23 @@ export class Spawn {
   }
 
   public static spawnComplete(
-    id: string[], arg: SpawnReturn
-  ): SpawnReturn {
-    return arg
+    id: string[], arg: SpawnArg, output: SpawnReturn
+  ): [ SpawnArg, SpawnReturn ] {
+    const { code, out } = output
+    const level = code > 0 ? "error" : "debug"
+
+    const message = [
+      `\ncommand: ${arg.command}${
+        arg.args ? " " + arg.args.join(" ") : ""
+      }`,
+      `code: ${code}`,
+      `cwd: ${arg.cwd || process.cwd()}`,
+      `\n${out}`,
+    ]
+
+    log(id, level, message.join("\n"))
+    
+    return [ arg, output ]
   }
 
   public static async spawnTerminal(
@@ -72,15 +71,25 @@ export class Spawn {
     const cols = process.stdout.columns
     const rows = process.stdout.rows
 
+    if (arg.args) {
+      arg.args = Array.isArray(arg.args) ?
+        arg.args :
+        [arg.args]
+    }
+
     const { args = [], command, cwd, env } = arg
 
-    const pty = spawn(command, args, {
-      cols,
-      cwd,
-      env,
-      name: "xterm-color",
-      rows,
-    })
+    const pty = spawn(
+      command,
+      args,
+      {
+        cols,
+        cwd,
+        env,
+        name: "xterm-color",
+        rows,
+      }
+    )
 
     let out = ""
 

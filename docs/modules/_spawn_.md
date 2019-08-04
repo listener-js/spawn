@@ -10,9 +10,16 @@
 
 * [Spawn](../classes/_spawn_.spawn.md)
 
-### Interfaces
+### Functions
 
-* [SpawnArg](../interfaces/_spawn_.spawnarg.md)
-* [SpawnReturn](../interfaces/_spawn_.spawnreturn.md)
-* [SpawnTerminalArg](../interfaces/_spawn_.spawnterminalarg.md)
-* [SpawnTerminalReturn](../interfaces/_spawn_.spawnterminalreturn.md)
+* [log](_spawn_.md#let-log)
+
+## Functions
+
+### `Let` log
+
+▸ **log**(): *void*
+
+Defined in spawn.ts:12
+
+**Returns:** *void*
