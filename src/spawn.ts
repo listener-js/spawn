@@ -48,15 +48,17 @@ export class Spawn {
   public static spawnComplete(
     id: string[], arg: SpawnArg, output: SpawnReturn
   ): [ SpawnArg, SpawnReturn ] {
+    const { args, command, cwd } = arg
     const { code, out } = output
+
     const level = code > 0 ? "error" : "debug"
 
     const message = [
-      `\ncommand: ${arg.command}${
-        arg.args ? " " + arg.args.join(" ") : ""
+      `\ncommand: ${command}${
+        args ? " " + args.join(" ") : ""
       }`,
       `code: ${code}`,
-      `cwd: ${arg.cwd || process.cwd()}`,
+      `cwd: ${cwd || process.cwd()}`,
       `\n${out}`,
     ]
 
@@ -71,13 +73,10 @@ export class Spawn {
     const cols = process.stdout.columns
     const rows = process.stdout.rows
 
-    if (arg.args) {
-      arg.args = Array.isArray(arg.args) ?
-        arg.args :
-        [arg.args]
-    }
+    const { args = [] } = arg
+    arg.args = Array.isArray(args) ? args : [args]
 
-    const { args = [], command, cwd, env } = arg
+    const { command, cwd, env } = arg
 
     const pty = spawn(
       command,

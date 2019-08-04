@@ -86,7 +86,7 @@ ___
 
 ▸ **spawnTerminal**(`arg`: [SpawnTerminalArg](../interfaces/_types_.spawnterminalarg.md)): *`Promise<SpawnTerminalReturn>`*
 
-Defined in spawn.ts:68
+Defined in spawn.ts:70
 
 **Parameters:**
 
