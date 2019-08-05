@@ -27,7 +27,7 @@
 
 ▪ **listeners**: *string[]* =  ["spawn", "spawnComplete"]
 
-Defined in spawn.ts:16
+*Defined in [spawn.ts:16](https://github.com/listener-js/spawn/blob/daf80b9/src/spawn.ts#L16)*
 
 ## Methods
 
@@ -35,7 +35,7 @@ Defined in spawn.ts:16
 
 ▸ **listen**(`listener`: `Listener`): *void*
 
-Defined in spawn.ts:18
+*Defined in [spawn.ts:18](https://github.com/listener-js/spawn/blob/daf80b9/src/spawn.ts#L18)*
 
 **Parameters:**
 
@@ -51,7 +51,7 @@ ___
 
 ▸ **spawn**(`id`: string[], `arg`: [SpawnArg](../interfaces/_types_.spawnarg.md)): *`Promise<SpawnReturn>`*
 
-Defined in spawn.ts:22
+*Defined in [spawn.ts:22](https://github.com/listener-js/spawn/blob/daf80b9/src/spawn.ts#L22)*
 
 **Parameters:**
 
@@ -68,7 +68,7 @@ ___
 
 ▸ **spawnComplete**(`id`: string[], `arg`: [SpawnArg](../interfaces/_types_.spawnarg.md), `output`: [SpawnReturn](../interfaces/_types_.spawnreturn.md)): *[[SpawnArg](../interfaces/_types_.spawnarg.md), [SpawnReturn](../interfaces/_types_.spawnreturn.md)]*
 
-Defined in spawn.ts:48
+*Defined in [spawn.ts:48](https://github.com/listener-js/spawn/blob/daf80b9/src/spawn.ts#L48)*
 
 **Parameters:**
 
@@ -86,7 +86,7 @@ ___
 
 ▸ **spawnTerminal**(`arg`: [SpawnTerminalArg](../interfaces/_types_.spawnterminalarg.md)): *`Promise<SpawnTerminalReturn>`*
 
-Defined in spawn.ts:70
+*Defined in [spawn.ts:70](https://github.com/listener-js/spawn/blob/daf80b9/src/spawn.ts#L70)*
 
 **Parameters:**
 

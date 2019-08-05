@@ -23,7 +23,7 @@
 
 • **args**? : *string[]*
 
-Defined in types.ts:19
+*Defined in [types.ts:19](https://github.com/listener-js/spawn/blob/daf80b9/src/types.ts#L19)*
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 • **command**: *string*
 
-Defined in types.ts:20
+*Defined in [types.ts:20](https://github.com/listener-js/spawn/blob/daf80b9/src/types.ts#L20)*
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 • **cwd**? : *string*
 
-Defined in types.ts:21
+*Defined in [types.ts:21](https://github.com/listener-js/spawn/blob/daf80b9/src/types.ts#L21)*
 
 ___
 
@@ -47,4 +47,4 @@ ___
 
 • **env**? : *`Record<string, string>`*
 
-Defined in types.ts:22
+*Defined in [types.ts:22](https://github.com/listener-js/spawn/blob/daf80b9/src/types.ts#L22)*

@@ -22,7 +22,7 @@
 
 • **code**: *number*
 
-Defined in types.ts:26
+*Defined in [types.ts:26](https://github.com/listener-js/spawn/blob/daf80b9/src/types.ts#L26)*
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 • **out**: *string*
 
-Defined in types.ts:27
+*Defined in [types.ts:27](https://github.com/listener-js/spawn/blob/daf80b9/src/types.ts#L27)*
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 • **signal**: *number*
 
-Defined in types.ts:28
+*Defined in [types.ts:28](https://github.com/listener-js/spawn/blob/daf80b9/src/types.ts#L28)*
