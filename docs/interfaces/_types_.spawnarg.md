@@ -26,7 +26,7 @@
 
 • **args**? : *string[]*
 
-*Defined in [types.ts:2](https://github.com/listener-js/spawn/blob/daf80b9/src/types.ts#L2)*
+Defined in types.ts:2
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 • **command**: *string*
 
-*Defined in [types.ts:3](https://github.com/listener-js/spawn/blob/daf80b9/src/types.ts#L3)*
+Defined in types.ts:3
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 • **cwd**? : *string*
 
-*Defined in [types.ts:4](https://github.com/listener-js/spawn/blob/daf80b9/src/types.ts#L4)*
+Defined in types.ts:4
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 • **exit**? : *boolean*
 
-*Defined in [types.ts:5](https://github.com/listener-js/spawn/blob/daf80b9/src/types.ts#L5)*
+Defined in types.ts:5
 
 ___
 
@@ -58,7 +58,7 @@ ___
 
 • **json**? : *boolean*
 
-*Defined in [types.ts:6](https://github.com/listener-js/spawn/blob/daf80b9/src/types.ts#L6)*
+Defined in types.ts:6
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 • **quiet**? : *boolean*
 
-*Defined in [types.ts:7](https://github.com/listener-js/spawn/blob/daf80b9/src/types.ts#L7)*
+Defined in types.ts:7
 
 ___
 
@@ -74,4 +74,4 @@ ___
 
 • **save**? : *boolean*
 
-*Defined in [types.ts:8](https://github.com/listener-js/spawn/blob/daf80b9/src/types.ts#L8)*
+Defined in types.ts:8

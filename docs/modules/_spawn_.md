@@ -20,6 +20,6 @@
 
 ▸ **log**(): *void*
 
-*Defined in [spawn.ts:12](https://github.com/listener-js/spawn/blob/daf80b9/src/spawn.ts#L12)*
+Defined in spawn.ts:12
 
 **Returns:** *void*
