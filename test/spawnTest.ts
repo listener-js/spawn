@@ -1,15 +1,15 @@
 import { listener } from "@listener-js/listener"
 import { Log } from "@listener-js/log"
-import { Spawn } from "../"
+import { spawn } from "../"
 
-listener({ Log, Spawn }, { logAll: true })
+listener({ Log, spawn }, { logAll: true })
 
 test("defined", (): void => {
-  expect(Spawn).not.toBeUndefined()
+  expect(spawn).not.toBeUndefined()
 })
 
 test("spawn command", async (): Promise<void> => {
-  const out = await Spawn.spawn(["test"], {
+  const out = await spawn.command(["test"], {
     args: ["hi"],
     command: "echo"
   })
@@ -23,7 +23,9 @@ test("spawn command", async (): Promise<void> => {
 })
 
 test("spawn command with options", async (): Promise<void> => {
-  const out = await Spawn.spawn(["test"], { command: "pwd" })
+  const out = await spawn.command(
+    ["test"], { command: "pwd" }
+  )
 
   expect(out).toMatchObject({
     code: 0,

@@ -10,16 +10,14 @@
 
 * [Spawn](../classes/_spawn_.spawn.md)
 
-### Functions
+### Variables
 
-* [log](_spawn_.md#let-log)
+* [spawn](_spawn_.md#const-spawn)
 
-## Functions
+## Variables
 
-### `Let` log
+### `Const` spawn
 
-▸ **log**(): *void*
+• **spawn**: *[Spawn](../classes/_spawn_.spawn.md)* =  new Spawn()
 
-Defined in spawn.ts:12
-
-**Returns:** *void*
+Defined in spawn.ts:108

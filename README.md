@@ -14,15 +14,15 @@ npm install @listener-js/listener @listener-js/spawn
 
 ```ts
 import { listener } from "@listener-js/listener"
-import { Spawn } from "@listener-js/spawn"
+import { spawn } from "@listener-js/spawn"
 
-listener({ Spawn })
+listener({ spawn })
 ```
 
 ## Usage
 
 ```js
-await Spawn.spawn([], {
+await spawn.command([], {
   args: ["hi"],
   command: "echo",
 })

@@ -1,6 +1,6 @@
 import { Listener } from "@listener-js/listener"
 import { Log } from "@listener-js/log"
-import { spawn } from "node-pty"
+import { spawn as spawnPty } from "node-pty"
 
 import {
   SpawnArg,
@@ -9,17 +9,18 @@ import {
   SpawnTerminalReturn
 } from "./types"
 
-let log: typeof Log.log = (): void => {}
-
 export class Spawn {
 
-  public static listeners: string[] = ["spawn", "spawnComplete"]
+  public listeners = ["command", "spawnComplete"]
 
-  public static listen(listener: Listener): void {
-    log = listener.instances.Log.log
+  private log: typeof Log.log = (): void => {}
+
+  public listen(listener: Listener): void {
+    const { Log } = listener.instances
+    this.log = Log ? Log.log : this.log
   }
 
-  public static async spawn(
+  public async command(
     id: string[],
     arg: SpawnArg
   ): Promise<SpawnReturn> {
@@ -45,7 +46,7 @@ export class Spawn {
     return output
   }
 
-  public static spawnComplete(
+  public spawnComplete(
     id: string[], arg: SpawnArg, output: SpawnReturn
   ): [ SpawnArg, SpawnReturn ] {
     const { args, command, cwd } = arg
@@ -62,12 +63,12 @@ export class Spawn {
       `\n${out}`,
     ]
 
-    log(id, level, message.join("\n"))
+    this.log(id, level, message.join("\n"))
     
     return [ arg, output ]
   }
 
-  public static async spawnTerminal(
+  public async spawnTerminal(
     arg: SpawnTerminalArg
   ): Promise<SpawnTerminalReturn> {
     const cols = process.stdout.columns
@@ -78,7 +79,7 @@ export class Spawn {
 
     const { command, cwd, env } = arg
 
-    const pty = spawn(
+    const pty = spawnPty(
       command,
       args,
       {
@@ -103,3 +104,5 @@ export class Spawn {
     })
   }
 }
+
+export const spawn = new Spawn()

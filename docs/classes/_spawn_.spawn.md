@@ -12,26 +12,44 @@
 
 ### Properties
 
-* [listeners](_spawn_.spawn.md#static-listeners)
+* [listeners](_spawn_.spawn.md#listeners)
 
 ### Methods
 
-* [listen](_spawn_.spawn.md#static-listen)
-* [spawn](_spawn_.spawn.md#static-spawn)
-* [spawnComplete](_spawn_.spawn.md#static-spawncomplete)
-* [spawnTerminal](_spawn_.spawn.md#static-spawnterminal)
+* [command](_spawn_.spawn.md#command)
+* [listen](_spawn_.spawn.md#listen)
+* [log](_spawn_.spawn.md#private-log)
+* [spawnComplete](_spawn_.spawn.md#spawncomplete)
+* [spawnTerminal](_spawn_.spawn.md#spawnterminal)
 
 ## Properties
 
-### `Static` listeners
+###  listeners
 
-▪ **listeners**: *string[]* =  ["spawn", "spawnComplete"]
+• **listeners**: *string[]* =  ["command", "spawnComplete"]
 
-Defined in spawn.ts:16
+Defined in spawn.ts:14
 
 ## Methods
 
-### `Static` listen
+###  command
+
+▸ **command**(`id`: string[], `arg`: [SpawnArg](../interfaces/_types_.spawnarg.md)): *`Promise<SpawnReturn>`*
+
+Defined in spawn.ts:23
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`id` | string[] |
+`arg` | [SpawnArg](../interfaces/_types_.spawnarg.md) |
+
+**Returns:** *`Promise<SpawnReturn>`*
+
+___
+
+###  listen
 
 ▸ **listen**(`listener`: `Listener`): *void*
 
@@ -47,28 +65,21 @@ Name | Type |
 
 ___
 
-### `Static` spawn
+### `Private` log
 
-▸ **spawn**(`id`: string[], `arg`: [SpawnArg](../interfaces/_types_.spawnarg.md)): *`Promise<SpawnReturn>`*
+▸ **log**(): *void*
 
-Defined in spawn.ts:22
+Defined in spawn.ts:16
 
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`id` | string[] |
-`arg` | [SpawnArg](../interfaces/_types_.spawnarg.md) |
-
-**Returns:** *`Promise<SpawnReturn>`*
+**Returns:** *void*
 
 ___
 
-### `Static` spawnComplete
+###  spawnComplete
 
 ▸ **spawnComplete**(`id`: string[], `arg`: [SpawnArg](../interfaces/_types_.spawnarg.md), `output`: [SpawnReturn](../interfaces/_types_.spawnreturn.md)): *[[SpawnArg](../interfaces/_types_.spawnarg.md), [SpawnReturn](../interfaces/_types_.spawnreturn.md)]*
 
-Defined in spawn.ts:48
+Defined in spawn.ts:49
 
 **Parameters:**
 
@@ -82,11 +93,11 @@ Name | Type |
 
 ___
 
-### `Static` spawnTerminal
+###  spawnTerminal
 
 ▸ **spawnTerminal**(`arg`: [SpawnTerminalArg](../interfaces/_types_.spawnterminalarg.md)): *`Promise<SpawnTerminalReturn>`*
 
-Defined in spawn.ts:70
+Defined in spawn.ts:71
 
 **Parameters:**
 
