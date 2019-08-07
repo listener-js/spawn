@@ -1,5 +1,5 @@
 import { Listener } from "@listener-js/listener"
-import { Log } from "@listener-js/log"
+import { log } from "@listener-js/log"
 import { spawn as spawnPty } from "node-pty"
 
 import {
@@ -13,11 +13,11 @@ export class Spawn {
 
   public listeners = ["command", "spawnComplete"]
 
-  private log: typeof Log.log = (): void => {}
+  private log: typeof log.log = (): void => {}
 
   public listen(listener: Listener): void {
-    const { Log } = listener.instances
-    this.log = Log ? Log.log : this.log
+    const { log } = listener.instances
+    this.log = log ? log.log : this.log
   }
 
   public async command(

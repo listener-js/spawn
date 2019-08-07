@@ -1,8 +1,8 @@
 import { listener } from "@listener-js/listener"
-import { Log } from "@listener-js/log"
+import { log } from "@listener-js/log"
 import { spawn } from "../"
 
-listener({ Log, spawn }, { logAll: true })
+listener({ log, spawn }, { logAll: true })
 
 test("defined", (): void => {
   expect(spawn).not.toBeUndefined()
