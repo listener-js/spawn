@@ -36,7 +36,7 @@ Defined in spawn.ts:14
 
 ▸ **command**(`id`: string[], `arg`: [SpawnArg](../interfaces/_types_.spawnarg.md)): *`Promise<SpawnReturn>`*
 
-Defined in spawn.ts:23
+Defined in spawn.ts:25
 
 **Parameters:**
 
@@ -51,7 +51,7 @@ ___
 
 ###  listen
 
-▸ **listen**(`listener`: `Listener`): *void*
+▸ **listen**(`instanceId`: string, `listener`: `Listener`): *void*
 
 Defined in spawn.ts:18
 
@@ -59,6 +59,7 @@ Defined in spawn.ts:18
 
 Name | Type |
 ------ | ------ |
+`instanceId` | string |
 `listener` | `Listener` |
 
 **Returns:** *void*
@@ -79,7 +80,7 @@ ___
 
 ▸ **spawnComplete**(`id`: string[], `arg`: [SpawnArg](../interfaces/_types_.spawnarg.md), `output`: [SpawnReturn](../interfaces/_types_.spawnreturn.md)): *[[SpawnArg](../interfaces/_types_.spawnarg.md), [SpawnReturn](../interfaces/_types_.spawnreturn.md)]*
 
-Defined in spawn.ts:49
+Defined in spawn.ts:51
 
 **Parameters:**
 
@@ -97,7 +98,7 @@ ___
 
 ▸ **spawnTerminal**(`arg`: [SpawnTerminalArg](../interfaces/_types_.spawnterminalarg.md)): *`Promise<SpawnTerminalReturn>`*
 
-Defined in spawn.ts:71
+Defined in spawn.ts:73
 
 **Parameters:**
 

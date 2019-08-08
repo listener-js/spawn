@@ -15,7 +15,9 @@ export class Spawn {
 
   private log: typeof log.log = (): void => {}
 
-  public listen(listener: Listener): void {
+  public listen(
+    instanceId: string, listener: Listener
+  ): void {
     const { log } = listener.instances
     this.log = log ? log.log : this.log
   }
