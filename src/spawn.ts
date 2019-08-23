@@ -13,14 +13,9 @@ export class Spawn {
 
   public listeners = ["command", "spawnComplete"]
 
-  private log: typeof log.log = (): void => {}
+  public listenerInstances = ["log.log"]
 
-  public listen(
-    listener: Listener
-  ): void {
-    const { log } = listener.instances
-    this.log = log ? log.log : this.log
-  }
+  private log: typeof log.log = (): void => {}
 
   public async command(
     id: string[],

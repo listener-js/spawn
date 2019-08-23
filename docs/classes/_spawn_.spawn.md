@@ -12,17 +12,25 @@
 
 ### Properties
 
+* [listenerInstances](_spawn_.spawn.md#listenerinstances)
 * [listeners](_spawn_.spawn.md#listeners)
 
 ### Methods
 
 * [command](_spawn_.spawn.md#command)
-* [listen](_spawn_.spawn.md#listen)
 * [log](_spawn_.spawn.md#private-log)
 * [spawnComplete](_spawn_.spawn.md#spawncomplete)
 * [spawnTerminal](_spawn_.spawn.md#spawnterminal)
 
 ## Properties
+
+###  listenerInstances
+
+• **listenerInstances**: *string[]* =  ["log.log"]
+
+Defined in spawn.ts:16
+
+___
 
 ###  listeners
 
@@ -36,7 +44,7 @@ Defined in spawn.ts:14
 
 ▸ **command**(`id`: string[], `arg`: [SpawnArg](../interfaces/_types_.spawnarg.md)): *`Promise<SpawnReturn>`*
 
-Defined in spawn.ts:25
+Defined in spawn.ts:20
 
 **Parameters:**
 
@@ -49,27 +57,11 @@ Name | Type |
 
 ___
 
-###  listen
-
-▸ **listen**(`listener`: `Listener`): *void*
-
-Defined in spawn.ts:18
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`listener` | `Listener` |
-
-**Returns:** *void*
-
-___
-
 ### `Private` log
 
 ▸ **log**(): *void*
 
-Defined in spawn.ts:16
+Defined in spawn.ts:18
 
 **Returns:** *void*
 
@@ -79,7 +71,7 @@ ___
 
 ▸ **spawnComplete**(`id`: string[], `arg`: [SpawnArg](../interfaces/_types_.spawnarg.md), `output`: [SpawnReturn](../interfaces/_types_.spawnreturn.md)): *[[SpawnArg](../interfaces/_types_.spawnarg.md), [SpawnReturn](../interfaces/_types_.spawnreturn.md)]*
 
-Defined in spawn.ts:51
+Defined in spawn.ts:46
 
 **Parameters:**
 
@@ -97,7 +89,7 @@ ___
 
 ▸ **spawnTerminal**(`arg`: [SpawnTerminalArg](../interfaces/_types_.spawnterminalarg.md)): *`Promise<SpawnTerminalReturn>`*
 
-Defined in spawn.ts:73
+Defined in spawn.ts:68
 
 **Parameters:**
 
