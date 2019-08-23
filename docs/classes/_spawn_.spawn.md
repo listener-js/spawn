@@ -51,7 +51,7 @@ ___
 
 ###  listen
 
-▸ **listen**(`instanceId`: string, `listener`: `Listener`): *void*
+▸ **listen**(`listener`: `Listener`): *void*
 
 Defined in spawn.ts:18
 
@@ -59,7 +59,6 @@ Defined in spawn.ts:18
 
 Name | Type |
 ------ | ------ |
-`instanceId` | string |
 `listener` | `Listener` |
 
 **Returns:** *void*
