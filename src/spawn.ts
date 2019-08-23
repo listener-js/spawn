@@ -1,4 +1,3 @@
-import { Listener } from "@listener-js/listener"
 import { log } from "@listener-js/log"
 import { spawn as spawnPty } from "node-pty"
 

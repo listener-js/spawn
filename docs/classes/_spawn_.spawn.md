@@ -28,7 +28,7 @@
 
 • **listenerInstances**: *string[]* =  ["log.log"]
 
-Defined in spawn.ts:16
+Defined in spawn.ts:15
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 • **listeners**: *string[]* =  ["command", "spawnComplete"]
 
-Defined in spawn.ts:14
+Defined in spawn.ts:13
 
 ## Methods
 
@@ -44,7 +44,7 @@ Defined in spawn.ts:14
 
 ▸ **command**(`id`: string[], `arg`: [SpawnArg](../interfaces/_types_.spawnarg.md)): *`Promise<SpawnReturn>`*
 
-Defined in spawn.ts:20
+Defined in spawn.ts:19
 
 **Parameters:**
 
@@ -61,7 +61,7 @@ ___
 
 ▸ **log**(): *void*
 
-Defined in spawn.ts:18
+Defined in spawn.ts:17
 
 **Returns:** *void*
 
@@ -71,7 +71,7 @@ ___
 
 ▸ **spawnComplete**(`id`: string[], `arg`: [SpawnArg](../interfaces/_types_.spawnarg.md), `output`: [SpawnReturn](../interfaces/_types_.spawnreturn.md)): *[[SpawnArg](../interfaces/_types_.spawnarg.md), [SpawnReturn](../interfaces/_types_.spawnreturn.md)]*
 
-Defined in spawn.ts:46
+Defined in spawn.ts:45
 
 **Parameters:**
 
@@ -89,7 +89,7 @@ ___
 
 ▸ **spawnTerminal**(`arg`: [SpawnTerminalArg](../interfaces/_types_.spawnterminalarg.md)): *`Promise<SpawnTerminalReturn>`*
 
-Defined in spawn.ts:68
+Defined in spawn.ts:67
 
 **Parameters:**
 
