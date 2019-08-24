@@ -12,7 +12,7 @@ export class Spawn {
 
   public listeners = ["command", "spawnComplete"]
 
-  public listenerInstances = ["log.log"]
+  public instances = ["log.log"]
 
   private log: typeof log.log = (): void => {}
 

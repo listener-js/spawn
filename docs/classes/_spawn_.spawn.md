@@ -12,7 +12,7 @@
 
 ### Properties
 
-* [listenerInstances](_spawn_.spawn.md#listenerinstances)
+* [instances](_spawn_.spawn.md#instances)
 * [listeners](_spawn_.spawn.md#listeners)
 
 ### Methods
@@ -24,9 +24,9 @@
 
 ## Properties
 
-###  listenerInstances
+###  instances
 
-• **listenerInstances**: *string[]* =  ["log.log"]
+• **instances**: *string[]* =  ["log.log"]
 
 Defined in spawn.ts:15
 
