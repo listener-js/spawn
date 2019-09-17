@@ -1,8 +1,9 @@
+import { imp } from "@listener-js/imp"
 import { listener } from "@listener-js/listener"
 import { log } from "@listener-js/log"
 import { spawn } from "../"
 
-listener({ log, spawn })
+listener({ imp, log, spawn })
 
 test("defined", (): void => {
   expect(spawn).not.toBeUndefined()
@@ -11,7 +12,7 @@ test("defined", (): void => {
 test("spawn command", async (): Promise<void> => {
   const out = await spawn.command(["test"], {
     args: ["hi"],
-    command: "echo"
+    command: "echo",
   })
 
   expect(out).toMatchObject({
@@ -22,10 +23,12 @@ test("spawn command", async (): Promise<void> => {
   })
 })
 
-test("spawn command with options", async (): Promise<void> => {
-  const out = await spawn.command(
-    ["test"], { command: "pwd" }
-  )
+test("spawn command with options", async (): Promise<
+  void
+> => {
+  const out = await spawn.command(["test"], {
+    command: "pwd",
+  })
 
   expect(out).toMatchObject({
     code: 0,

@@ -5,14 +5,13 @@ import {
   SpawnArg,
   SpawnReturn,
   SpawnTerminalArg,
-  SpawnTerminalReturn
+  SpawnTerminalReturn,
 } from "./types"
 
 export class Spawn {
-
   public listeners = ["command", "spawnComplete"]
 
-  public instances = ["log.log"]
+  public externals = ["log.log"]
 
   private log: typeof log.log = (): void => {}
 
@@ -22,10 +21,13 @@ export class Spawn {
   ): Promise<SpawnReturn> {
     const { exit, json } = arg
 
-    let { code, out, signal } =
-      await this.spawnTerminal(arg)
+    const spawnOut = await this.spawnTerminal(arg)
+
+    const { code, signal } = spawnOut
 
     const err = code > 0
+
+    let { out } = spawnOut
 
     if (!err && json) {
       out = JSON.parse(out)
@@ -43,8 +45,10 @@ export class Spawn {
   }
 
   public spawnComplete(
-    id: string[], arg: SpawnArg, output: SpawnReturn
-  ): [ SpawnArg, SpawnReturn ] {
+    id: string[],
+    arg: SpawnArg,
+    output: SpawnReturn
+  ): [SpawnArg, SpawnReturn] {
     const { args, command, cwd } = arg
     const { code, out } = output
 
@@ -60,8 +64,8 @@ export class Spawn {
     ]
 
     this.log(id, level, message.join("\n"))
-    
-    return [ arg, output ]
+
+    return [arg, output]
   }
 
   public async spawnTerminal(
@@ -75,17 +79,13 @@ export class Spawn {
 
     const { command, cwd, env } = arg
 
-    const pty = spawnPty(
-      command,
-      args,
-      {
-        cols,
-        cwd,
-        env,
-        name: "xterm-color",
-        rows,
-      }
-    )
+    const pty = spawnPty(command, args, {
+      cols,
+      cwd,
+      env,
+      name: "xterm-color",
+      rows,
+    })
 
     let out = ""
 

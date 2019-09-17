@@ -1,6 +1,4 @@
-> **[@listener-js/spawn](../README.md)**
-
-[Globals](../globals.md) / ["types"](../modules/_types_.md) / [SpawnTerminalArg](_types_.spawnterminalarg.md) /
+[@listener-js/spawn](../README.md) › [Globals](../globals.md) › ["types"](../modules/_types_.md) › [SpawnTerminalArg](_types_.spawnterminalarg.md)
 
 # Interface: SpawnTerminalArg
 
@@ -45,6 +43,6 @@ ___
 
 ### `Optional` env
 
-• **env**? : *`Record<string, string>`*
+• **env**? : *Record‹string, string›*
 
 Defined in types.ts:22

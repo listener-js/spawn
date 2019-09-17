@@ -1,6 +1,4 @@
-> **[@listener-js/spawn](../README.md)**
-
-[Globals](../globals.md) / ["types"](_types_.md) /
+[@listener-js/spawn](../README.md) › [Globals](../globals.md) › ["types"](_types_.md)
 
 # External module: "types"
 

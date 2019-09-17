@@ -1,6 +1,4 @@
-> **[@listener-js/spawn](../README.md)**
-
-[Globals](../globals.md) / ["spawn"](_spawn_.md) /
+[@listener-js/spawn](../README.md) › [Globals](../globals.md) › ["spawn"](_spawn_.md)
 
 # External module: "spawn"
 

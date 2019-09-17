@@ -1,6 +1,4 @@
-> **[@listener-js/spawn](../README.md)**
-
-[Globals](../globals.md) / ["spawn"](../modules/_spawn_.md) / [Spawn](_spawn_.spawn.md) /
+[@listener-js/spawn](../README.md) › [Globals](../globals.md) › ["spawn"](../modules/_spawn_.md) › [Spawn](_spawn_.spawn.md)
 
 # Class: Spawn
 
@@ -12,7 +10,7 @@
 
 ### Properties
 
-* [instances](_spawn_.spawn.md#instances)
+* [externals](_spawn_.spawn.md#externals)
 * [listeners](_spawn_.spawn.md#listeners)
 
 ### Methods
@@ -24,11 +22,11 @@
 
 ## Properties
 
-###  instances
+###  externals
 
-• **instances**: *string[]* =  ["log.log"]
+• **externals**: *string[]* =  ["log.log"]
 
-Defined in spawn.ts:15
+Defined in spawn.ts:14
 
 ___
 
@@ -36,15 +34,15 @@ ___
 
 • **listeners**: *string[]* =  ["command", "spawnComplete"]
 
-Defined in spawn.ts:13
+Defined in spawn.ts:12
 
 ## Methods
 
 ###  command
 
-▸ **command**(`id`: string[], `arg`: [SpawnArg](../interfaces/_types_.spawnarg.md)): *`Promise<SpawnReturn>`*
+▸ **command**(`id`: string[], `arg`: [SpawnArg](../interfaces/_types_.spawnarg.md)): *Promise‹[SpawnReturn](../interfaces/_types_.spawnreturn.md)›*
 
-Defined in spawn.ts:19
+Defined in spawn.ts:18
 
 **Parameters:**
 
@@ -53,7 +51,7 @@ Name | Type |
 `id` | string[] |
 `arg` | [SpawnArg](../interfaces/_types_.spawnarg.md) |
 
-**Returns:** *`Promise<SpawnReturn>`*
+**Returns:** *Promise‹[SpawnReturn](../interfaces/_types_.spawnreturn.md)›*
 
 ___
 
@@ -61,7 +59,7 @@ ___
 
 ▸ **log**(): *void*
 
-Defined in spawn.ts:17
+Defined in spawn.ts:16
 
 **Returns:** *void*
 
@@ -71,7 +69,7 @@ ___
 
 ▸ **spawnComplete**(`id`: string[], `arg`: [SpawnArg](../interfaces/_types_.spawnarg.md), `output`: [SpawnReturn](../interfaces/_types_.spawnreturn.md)): *[[SpawnArg](../interfaces/_types_.spawnarg.md), [SpawnReturn](../interfaces/_types_.spawnreturn.md)]*
 
-Defined in spawn.ts:45
+Defined in spawn.ts:47
 
 **Parameters:**
 
@@ -87,9 +85,9 @@ ___
 
 ###  spawnTerminal
 
-▸ **spawnTerminal**(`arg`: [SpawnTerminalArg](../interfaces/_types_.spawnterminalarg.md)): *`Promise<SpawnTerminalReturn>`*
+▸ **spawnTerminal**(`arg`: [SpawnTerminalArg](../interfaces/_types_.spawnterminalarg.md)): *Promise‹[SpawnTerminalReturn](../interfaces/_types_.spawnterminalreturn.md)›*
 
-Defined in spawn.ts:67
+Defined in spawn.ts:71
 
 **Parameters:**
 
@@ -97,4 +95,4 @@ Name | Type |
 ------ | ------ |
 `arg` | [SpawnTerminalArg](../interfaces/_types_.spawnterminalarg.md) |
 
-**Returns:** *`Promise<SpawnTerminalReturn>`*
+**Returns:** *Promise‹[SpawnTerminalReturn](../interfaces/_types_.spawnterminalreturn.md)›*

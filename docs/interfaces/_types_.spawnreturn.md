@@ -1,6 +1,4 @@
-> **[@listener-js/spawn](../README.md)**
-
-[Globals](../globals.md) / ["types"](../modules/_types_.md) / [SpawnReturn](_types_.spawnreturn.md) /
+[@listener-js/spawn](../README.md) › [Globals](../globals.md) › ["types"](../modules/_types_.md) › [SpawnReturn](_types_.spawnreturn.md)
 
 # Interface: SpawnReturn
 
