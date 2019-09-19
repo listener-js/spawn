@@ -3,7 +3,7 @@ import { listener } from "@listener-js/listener"
 import { log } from "@listener-js/log"
 import { spawn } from "../"
 
-listener({ imp, log, spawn })
+listener([], { imp, log, spawn })
 
 test("defined", (): void => {
   expect(spawn).not.toBeUndefined()
