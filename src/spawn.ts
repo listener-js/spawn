@@ -1,4 +1,4 @@
-import { log } from "@listener-js/log"
+import log from "@listener-js/log"
 import { spawn as spawnPty } from "node-pty"
 
 import {
@@ -101,4 +101,4 @@ export class Spawn {
   }
 }
 
-export const spawn = new Spawn()
+export default new Spawn()

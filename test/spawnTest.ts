@@ -1,7 +1,7 @@
 import join from "@listener-js/join"
 import { load } from "@listener-js/listener"
-import { log } from "@listener-js/log"
-import { spawn } from "../"
+import log from "@listener-js/log"
+import spawn from "../"
 
 load([], { join, log, spawn })
 
