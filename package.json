@@ -64,8 +64,5 @@
       "eslint --ignore-path .gitignore --fix",
       "git add"
     ]
-  },
-  "dependencies": {
-    "install": "0.13.0"
   }
 }
