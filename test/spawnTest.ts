@@ -1,9 +1,9 @@
-import { imp } from "@listener-js/imp"
-import { listener } from "@listener-js/listener"
+import join from "@listener-js/join"
+import { load } from "@listener-js/listener"
 import { log } from "@listener-js/log"
 import { spawn } from "../"
 
-listener([], { imp, log, spawn })
+load([], { join, log, spawn })
 
 test("defined", (): void => {
   expect(spawn).not.toBeUndefined()

@@ -9,14 +9,10 @@ import {
 } from "./types"
 
 export class Spawn {
-  public listeners = ["command", "spawnComplete"]
-
-  public externals = ["log.log"]
-
   private log: typeof log.log = (): void => {}
 
   public async command(
-    id: string[],
+    lid: string[],
     arg: SpawnArg
   ): Promise<SpawnReturn> {
     const { exit, json } = arg
@@ -35,7 +31,7 @@ export class Spawn {
 
     const output = { code, err, out, signal }
 
-    this.spawnComplete(id, arg, output)
+    this.spawnComplete(lid, arg, output)
 
     if (err && exit) {
       process.exit(code)
@@ -45,7 +41,7 @@ export class Spawn {
   }
 
   public spawnComplete(
-    id: string[],
+    lid: string[],
     arg: SpawnArg,
     output: SpawnReturn
   ): [SpawnArg, SpawnReturn] {
@@ -63,7 +59,7 @@ export class Spawn {
       `\n${out}`,
     ]
 
-    this.log(id, level, message.join("\n"))
+    this.log(lid, level, message.join("\n"))
 
     return [arg, output]
   }
@@ -98,6 +94,10 @@ export class Spawn {
         resolve({ code, out, signal })
       )
     })
+  }
+
+  private listenerJoin(): string[][] {
+    return [["log.log"]]
   }
 }
 
