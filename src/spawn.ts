@@ -1,3 +1,4 @@
+import { ListenerJoins } from "@listener-js/join"
 import log from "@listener-js/log"
 import { spawn as spawnPty } from "node-pty"
 
@@ -96,8 +97,8 @@ export class Spawn {
     })
   }
 
-  private listenerJoin(): string[][] {
-    return [["log.log"]]
+  private listenerJoins(lid: string[]): ListenerJoins {
+    return [[["log.log"]]]
   }
 }
 

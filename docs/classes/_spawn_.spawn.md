@@ -11,7 +11,7 @@
 ### Methods
 
 * [command](_spawn_.spawn.md#command)
-* [listenerJoin](_spawn_.spawn.md#private-listenerjoin)
+* [listenerJoins](_spawn_.spawn.md#private-listenerjoins)
 * [log](_spawn_.spawn.md#private-log)
 * [spawnComplete](_spawn_.spawn.md#spawncomplete)
 * [spawnTerminal](_spawn_.spawn.md#spawnterminal)
@@ -22,7 +22,7 @@
 
 ▸ **command**(`lid`: string[], `arg`: [SpawnArg](../interfaces/_types_.spawnarg.md)): *Promise‹[SpawnReturn](../interfaces/_types_.spawnreturn.md)›*
 
-Defined in spawn.ts:14
+Defined in spawn.ts:15
 
 **Parameters:**
 
@@ -35,13 +35,19 @@ Name | Type |
 
 ___
 
-### `Private` listenerJoin
+### `Private` listenerJoins
 
-▸ **listenerJoin**(): *string[][]*
+▸ **listenerJoins**(`lid`: string[]): *ListenerJoins*
 
-Defined in spawn.ts:99
+Defined in spawn.ts:100
 
-**Returns:** *string[][]*
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`lid` | string[] |
+
+**Returns:** *ListenerJoins*
 
 ___
 
@@ -49,7 +55,7 @@ ___
 
 ▸ **log**(): *void*
 
-Defined in spawn.ts:12
+Defined in spawn.ts:13
 
 **Returns:** *void*
 
@@ -59,7 +65,7 @@ ___
 
 ▸ **spawnComplete**(`lid`: string[], `arg`: [SpawnArg](../interfaces/_types_.spawnarg.md), `output`: [SpawnReturn](../interfaces/_types_.spawnreturn.md)): *[[SpawnArg](../interfaces/_types_.spawnarg.md), [SpawnReturn](../interfaces/_types_.spawnreturn.md)]*
 
-Defined in spawn.ts:43
+Defined in spawn.ts:44
 
 **Parameters:**
 
@@ -77,7 +83,7 @@ ___
 
 ▸ **spawnTerminal**(`arg`: [SpawnTerminalArg](../interfaces/_types_.spawnterminalarg.md)): *Promise‹[SpawnTerminalReturn](../interfaces/_types_.spawnterminalreturn.md)›*
 
-Defined in spawn.ts:67
+Defined in spawn.ts:68
 
 **Parameters:**
 
